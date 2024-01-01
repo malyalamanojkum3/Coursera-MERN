@@ -15,7 +15,7 @@ const setUser = useSetRecoilState(userState)
 
 let callback1 = async () => {
   try {
-    const response = await fetch("http://localhost:3000/admin/signup", {
+    const response = await fetch(`${process.env.API_URL}admin/signup`, {
       method: "POST",
       body: JSON.stringify({
         username: email,

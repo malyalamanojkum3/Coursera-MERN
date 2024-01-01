@@ -13,7 +13,7 @@ function Courses(){
     }
     useEffect(()=>{
     let CourseCall = async() => {
-        let response = await fetch("http://localhost:3000/admin/courses",{
+        let response = await fetch(`${process.env.API_URL}admin/courses`,{
             "method" : "GET",
             headers : {
                 "Content-type" : "application/json",

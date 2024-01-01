@@ -37,7 +37,7 @@ const Init = ()=>{
   useEffect(()=>{
     try{
     let callback2 = async(token)=>{
-        let response = await fetch("http://localhost:3000/admin/me",{
+        let response = await fetch(`${process.env.API_URL}admin/me`,{
         method : "GET",
         headers : {
             "Content-type"  : "application/json",

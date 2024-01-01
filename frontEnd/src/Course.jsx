@@ -7,7 +7,7 @@ function Course(){
     const [course,setCourse]= useState(null);
     useEffect(()=>{
         let findCourse = async(courseId) => {
-            let response = await fetch(`http://localhost:3000/admin/courses/${courseId}`,{
+            let response = await fetch(`${process.env.API_URL}admin/courses/${courseId}`,{
                 method : "GET",
                 headers : {
                     "Content-type" : "application/json",
@@ -41,7 +41,7 @@ let UpdatedCard = (props) => {
         if(title) updatedCourse.title = title;
         if(description) updatedCourse.description = description;
         if (image) updatedCourse.imageLink = image;
-        let response = await fetch(`http://localhost:3000/admin/courses/${props.course._id}`,{
+        let response = await fetch(`${process.env.API_URL}admin/courses/${props.course._id}`,{
             "method" : "PUT",
             "body" : JSON.stringify(updatedCourse),
             "headers" : {

@@ -13,7 +13,7 @@ function AddCourse(){
 
     let callback1 = ()=>{
         try{
-            fetch("http://localhost:3000/admin/courses",{
+            fetch(`${process.env.API_URL}admin/courses`,{
             method : "POST",
             body : JSON.stringify({
               title,
