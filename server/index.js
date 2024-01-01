@@ -10,6 +10,10 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 
+app.get('/', async(req, res) => {
+res.send("hi")
+})
+
 app.use('/admin',adminRouter);
 app.use('/users',userRouter);
 app.listen(port, () => console.log('Server running on port'+ port));
