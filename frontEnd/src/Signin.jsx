@@ -13,7 +13,7 @@ function Signin(){
   const setUser = useSetRecoilState(userState);
   const navigate = useNavigate();
   let callback = async() => {
-    let res = await fetch(`${process.env.API_URL}admin/login`,{
+    let res = await fetch(`${process.env.REACT_APP_API_URL}admin/login`,{
       method : "POST",
       headers : {
         "username" : username,
