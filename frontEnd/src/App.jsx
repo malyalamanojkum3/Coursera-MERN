@@ -37,7 +37,7 @@ const Init = ()=>{
   useEffect(()=>{
     try{
     let callback2 = async(token)=>{
-        let response = await fetch(`${process.env.REACT_APP_REACT_APP_API_URL}admin/me`,{
+        let response = await fetch(`https://coursera-mern.vercel.app/admin/me`,{
         method : "GET",
         headers : {
             "Content-type"  : "application/json",

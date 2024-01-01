@@ -13,7 +13,7 @@ function AddCourse(){
 
     let callback1 = ()=>{
         try{
-            fetch(`${process.env.REACT_APP_REACT_APP_API_URL}admin/courses`,{
+            fetch(`https://coursera-mern.vercel.app/admin/courses`,{
             method : "POST",
             body : JSON.stringify({
               title,

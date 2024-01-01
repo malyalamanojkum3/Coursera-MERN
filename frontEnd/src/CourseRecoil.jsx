@@ -72,7 +72,7 @@ let UpdatedCard = (props) => {
         if(title) updatedCourse.title = title;
         if(description) updatedCourse.description = description;
         if (image) updatedCourse.imageLink = image;
-        let response = await fetch(`${process.env.REACT_APP_REACT_APP_API_URL}admin/courses/${props.courseId}`,{
+        let response = await fetch(`https://coursera-mern.vercel.app/admin/courses/${props.courseId}`,{
             "method" : "PUT",
             "body" : JSON.stringify(updatedCourse),
             "headers" : {
