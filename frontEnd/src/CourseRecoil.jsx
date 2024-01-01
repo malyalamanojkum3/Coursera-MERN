@@ -13,7 +13,7 @@ function Course(){
 
     useEffect(()=>{
         let findCourse = async(courseId) => {
-            let response = await fetch(`${process.env.REACT_APP_API_URL}admin/courses/${courseId}`,{
+            let response = await fetch(`https://coursera-mern.vercel.app/admin/courses/${courseId}`,{
                 method : "GET",
                 headers : {
                     "Content-type" : "application/json",
